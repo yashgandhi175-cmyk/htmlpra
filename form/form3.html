@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #4070f4;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 870px;
+    padding: 20px 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 30px;
+    background-color: #4070f4;
+}
+
+h3 {
+    font-size: 17px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 25px;
+    margin-bottom: 25px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    height: 42px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.input-box input:focus {
+    border-color: #4070f4;
+}
+
+.input-box input::placeholder {
+    color: #888;
+}
+
+.next-btn {
+    width: 30%;
+    height: 46px;
+    background-color: #4070f4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.next-btn span {
+    margin-left: 8px;
+    font-size: 20px;
+}
+
+.next-btn:hover {
+    background-color: #265df2;
+}
+
+</style>
+
+<body>
+
+    <div class="container">
+
+        <h2>Registration</h2>
+
+        <form>
+
+            <h3>Personal Details</h3>
+
+            <div class="form-grid">
+
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+
+                <div class="input-box">
+                    <label>Date of Birth</label>
+                    <input type="text" placeholder="Enter birth date">
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+
+                <div class="input-box">
+                    <label>Mobile number</label>
+                    <input type="tel" placeholder="Enter mobile number">
+                </div>
+
+                <div class="input-box">
+                    <label>Gender</label>
+                    <input type="text" placeholder="Enter your gender">
+                </div>
+
+                <div class="input-box">
+                    <label>Occupation</label>
+                    <input type="text" placeholder="Enter occupation">
+                </div>
+
+            </div>
+
+            <h3>Identity Details</h3>
+
+            <div class="form-grid">
+
+                <div class="input-box">
+                    <label>ID Type</label>
+                    <input type="text" placeholder="Enter ID type">
+                </div>
+
+                <div class="input-box">
+                    <label>ID Number</label>
+                    <input type="text" placeholder="Enter ID number">
+                </div>
+
+                <div class="input-box">
+                    <label>Issue Authority</label>
+                    <input type="text" placeholder="Enter issue department">
+                </div>
+
+                <div class="input-box">
+                    <label>Issue Date</label>
+                    <input type="text" placeholder="Enter ID issue date">
+                </div>
+
+                <div class="input-box">
+                    <label>Issue State</label>
+                    <input type="text" placeholder="Enter ID issue state">
+                </div>
+
+                <div class="input-box">
+                    <label>Expiry Date</label>
+                    <input type="text" placeholder="Enter ID expiry date">
+                </div>
+
+            </div>
+
+            <button type="button" class="next-btn">
+                Next <span>→</span>
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

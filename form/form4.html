@@ -1,0 +1,242 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fe185dde3d.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 500px;
+    background-color: #eeeeee;
+    padding: 20px 45px 55px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px;
+    color: #666;
+    cursor: pointer;
+}
+
+.radio-group input {
+    display: none;
+}
+
+.radio-btn {
+    width: 28px;
+    height: 28px;
+    background-color: #3f5eae;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-group input:checked + .radio-btn::after {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #dddddd;
+    margin: 25px 0 30px;
+}
+
+.input-box {
+    display: flex;
+    height: 55px;
+    margin-bottom: 22px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.icon {
+    width: 60px;
+    background-color: #3f5eae;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.input-box input {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid #ddd;
+    outline: none;
+    padding: 0 15px;
+    font-size: 20px;
+    color: #555;
+}
+
+.input-box input::placeholder {
+    color: #999;
+}
+
+.gender {
+    margin-top: 35px;
+    margin-bottom: 55px;
+}
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.bottom-section p {
+    width: 55%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #777;
+}
+
+.bottom-section a {
+    color: #6250d9;
+    text-decoration: underline;
+}
+
+button {
+    background-color: #3f5eae;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #304c96;
+}
+
+</style>
+<body>
+
+    <div class="container">
+
+        <h1>Registration</h1>
+
+        <form>
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="account">
+                    <span class="radio-btn"></span>
+                    Personal
+                </label>
+
+                <label>
+                    <input type="radio" name="account">
+                    <span class="radio-btn"></span>
+                    Company
+                </label>
+
+            </div>
+
+            <hr>
+            <div class="input-box">
+                <span class="icon">
+                 <i class="fa-regular fa-envelope"></i>
+                </span>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                  <i class="fa-solid fa-user"></i>  
+                </span>
+                <input type="text" placeholder="Name" required>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                   <i class="fa-solid fa-shield"></i> 
+                </span>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <div class="radio-group gender">
+
+                <label>
+                    <input type="radio" name="gender">
+                    <span class="radio-btn"></span>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender">
+                    <span class="radio-btn"></span>
+                    Female
+                </label>
+
+            </div>
+            <div class="bottom-section">
+
+                <p>
+                    By clicking Register, you agree on our
+                    <a href="#">terms and condition</a>.
+                </p>
+
+                <button type="submit">Register</button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
