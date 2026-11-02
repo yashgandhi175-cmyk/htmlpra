@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fruit Grid Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px 180px 150px;
+    grid-template-areas:
+        "grapes strawberry watermelon watermelon"
+        "orange orange watermelon watermelon"
+        "papaya papaya pineapple pineapple";
+    gap: 10px;
+    max-width: 520px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grapes {
+    grid-area: grapes;
+}
+
+.strawberry {
+    grid-area: strawberry;
+}
+
+.watermelon {
+    grid-area: watermelon;
+}
+
+.orange {
+    grid-area: orange;
+}
+
+.papaya {
+    grid-area: papaya;
+}
+
+.pineapple {
+    grid-area: pineapple;
+}
+
+</style>
+<body>
+
+    <div class="gallery">
+
+        <img class="grapes" src="" alt="Grapes">
+
+        <img class="strawberry" src="" alt="Strawberries">
+
+        <img class="watermelon" src="" alt="Watermelon">
+
+        <img class="orange" src="" alt="Orange">
+
+        <img class="papaya" src="" alt="Papaya">
+
+        <img class="pineapple" src="" alt="Pineapple">
+
+    </div>
+
+</body>
+</html>

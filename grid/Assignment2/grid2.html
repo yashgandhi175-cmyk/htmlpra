@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 160px 160px 100px;
+
+    grid-template-areas:
+        "card1 card2 card2"
+        "card3 card3 card4"
+        "card5 card6 card7";
+
+    gap: 10px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.card a {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+</style>
+<body>
+
+    <div class="container">
+
+        <div class="card card1">
+            <img src="" alt="Winter">
+            <h3>The winter of my discontent</h3>
+            <a href="">READ POST</a>
+        </div>
+
+        <div class="card card2">
+            <img src="" alt="City">
+            <h3>Instagram is toxic but I keep posting</h3>
+            <a href="">READ POST</a>
+        </div>
+
+        <div class="card card3">
+            <img src="" alt="Ocean">
+            <h3>Throwing my phone into the ocean</h3>
+            <a href="">READ POST</a>
+        </div>
+
+        <div class="card card4">
+            <img src="" alt="Room">
+            <h3>I'm never leaving my room</h3>
+            <a href="">READ POST</a>
+        </div>
+
+        <div class="card card5">
+            <img src="" alt="Horizon">
+            <h3>Staring at the horizon thinking</h3>
+            <a href="">READ POST</a>
+        </div>
+
+        <div class="card card6">
+            <img src="" alt="Water">
+            <h3>This is water</h3>
+            <a href="">READ POST</a>
+        </div>
+
+        <div class="card card7">
+            <img src="" alt="Table">
+            <h3>Table for one please</h3>
+            <a href="">READ POST</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

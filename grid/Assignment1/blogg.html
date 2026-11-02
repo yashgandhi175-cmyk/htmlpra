@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Areas Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 10px;
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: blue;
+    color: white;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: green;
+    color: white;
+}
+
+main {
+    grid-area: main;
+    background-color: orange;
+    color: white;
+}
+
+footer {
+    grid-area: footer;
+    background-color: purple;
+    color: white;
+}
+
+header, aside, main, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <header>Header</header>
+        <aside>Sidebar</aside>
+        <main>Main Content</main>
+        <footer>Footer</footer>
+    </div>
+
+</body>
+</html>

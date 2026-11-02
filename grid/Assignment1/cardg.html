@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Card Grid</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h2 {
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+</style>
+<body>
+
+    <h1>Our Cards</h1>
+
+    <div class="card-container">
+
+        <div class="card">
+            <img src="" alt="Mountain">
+            <h2>Beautiful Mountains</h2>
+            <p>Explore the beauty of mountains and enjoy the peaceful nature.</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="Forest">
+            <h2>Green Forest</h2>
+            <p>Discover green forests filled with beautiful trees and wildlife.</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="River">
+            <h2>Flowing Rivers</h2>
+            <p>Enjoy the relaxing sound of rivers flowing through nature.</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="Wildlife">
+            <h2>Wildlife</h2>
+            <p>Discover amazing animals and their natural habitats.</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="Landscape">
+            <h2>Beautiful Landscape</h2>
+            <p>Experience stunning landscapes and breathtaking views.</p>
+        </div>
+
+        <div class="card">
+            <img src="" alt="Beach">
+            <h2>Peaceful Beaches</h2>
+            <p>Relax on beautiful beaches and enjoy the ocean breeze.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
