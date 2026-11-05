@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Image Gallery</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 30px;
+            background-color: white;
+        }
+
+        .gallery {
+            width: 453px;
+            height: 386px;
+            background-color: #d0b000;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .gallery img {
+            position: absolute;
+            object-fit: cover;
+        }
+
+        .landscape {
+            width: 147px;
+            height: 107px;
+            z-index: 1;
+        }
+        .sunset    { left: 160px; top: 37px; }
+        .waterfall { left: 36px;  top: 141px; }
+        .forest    { left: 283px; top: 141px; }
+        .ocean     { left: 160px; top: 245px; }
+
+        .gallery::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            background:
+                radial-gradient(circle at 233px -14px,  #d0b000 83px, transparent 84px),
+                radial-gradient(circle at 233px 404px,  #d0b000 83px, transparent 84px),
+                radial-gradient(circle at -14px 194px,  #d0b000 83px, transparent 84px),
+                radial-gradient(circle at 480px 194px,  #d0b000 83px, transparent 84px);
+        }
+
+        .animal {
+            width: 155px;
+            height: 155px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 6px #d0b000;
+            z-index: 3;
+        }
+        .wolf  { left: 32px;  top: 12px; }
+        .tiger { left: 279px; top: 12px; }
+        .lion  { left: 156px; top: 116px; }
+        .dog   { left: 32px;  top: 221px; }
+        .bear  { left: 279px; top: 221px; }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="gallery">
+
+        <img class="landscape sunset" src="" alt="Sunset">
+        <img class="landscape waterfall" src="" alt="Waterfall">
+        <img class="landscape forest" src="" alt="Green Forest">
+        <img class="landscape ocean" src="" alt="Ocean">
+
+        <img class="animal wolf" src="" alt="Wolf">
+        <img class="animal tiger" src="" alt="Tiger">
+        <img class="animal lion" src="" alt="Lion">
+        <img class="animal dog" src="" alt="Dog">
+        <img class="animal bear" src="" alt="Bear">
+
+    </div>
+
+</body>
+</html>

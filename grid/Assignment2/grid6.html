@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Five Panel Diagonal Grid</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ffffff;
+        font-family: Arial, sans-serif;
+      }
+
+      .collage {
+        position: relative;
+        width: 95%;
+        max-width: 1200px;
+        aspect-ratio: 1200 / 550;
+        overflow: hidden;
+        background: #ffffff;
+      }
+
+      .panel {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      .panel img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .panel-1 {
+        clip-path: polygon(0 0, 44.5% 0, 0 74.2%);
+      }
+
+      .panel-2 {
+        clip-path: polygon(0 76.2%, 31.8% 23.2%, 76.5% 100%, 0 100%);
+      }
+
+      .panel-3 {
+        background: #929391;
+        clip-path: polygon(32% 21.2%, 45.8% 0, 84% 0, 52.3% 55.5%);
+        color: #ffffff;
+        z-index: 2;
+      }
+      
+      .content {
+        position: absolute;
+        top: 8%;
+        left: 40%;
+        width: 25%;
+        text-align: center;
+      }
+
+      .content h2 {
+        font-size: clamp(12px, 1.35vw, 17px);
+        font-weight: bold;
+        line-height: 1.2;
+        margin-bottom: 22px;
+      }
+
+      .content p {
+        font-size: clamp(8px, 0.85vw, 11px);
+        line-height: 1.3;
+      }
+
+      .panel-4 {
+        clip-path: polygon(86% 0, 100% 0, 100% 24%);
+      }
+
+      .panel-5 {
+        clip-path: polygon(
+          86% 1.5%,
+          100% 26%,
+          100% 100%,
+          78.2% 100%,
+          52.3% 57%
+        );
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="collage">
+      <div class="panel panel-1">
+        <img src="" alt="Top left landscape">
+      </div>
+
+      <div class="panel panel-2">
+        <img src="" alt="Bridge landscape">
+      </div>
+
+      <div class="panel panel-3">
+        <div class="content">
+          <h2>
+            THIS GRID WORKS<br>
+            IN INTERNET EXPLORER
+          </h2>
+
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat. Duis autem
+          </p>
+        </div>
+      </div>
+
+      <div class="panel panel-4">
+        <img src="" alt="Sky landscape">
+      </div>
+
+      <div class="panel panel-5">
+        <img src="" alt="Mountain landscape">
+      </div>
+    </div>
+  </body>
+</html>
+<img src="" alt="">

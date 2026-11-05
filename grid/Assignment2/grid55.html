@@ -1,0 +1,225 @@
+<!for extra understanding 
+SVG command	Meaning
+M	Move to a position
+L	Draw a straight line
+Q	Draw a quadratic curve
+C	Draw a cubic curve
+Z	Close the shape>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Curved Animal Image Collage</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+    aspect-ratio: 500 / 422;
+    background: #d0b000;
+    overflow: hidden;
+}
+
+.item {
+    position: absolute;
+    overflow: hidden;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.animal {
+    border: 6px solid #d0b000;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.animal img {
+    border-radius: 50%;
+}
+.wolf {
+    width: 39%;
+    height: 41%;
+    top: 2%;
+    left: 5%;
+}
+
+.tiger {
+    width: 40%;
+    height: 41%;
+    top: 2%;
+    right: 2%;
+}
+
+.lion {
+    width: 41%;
+    height: 43%;
+    top: 29%;
+    left: 29.5%;
+    z-index: 4;
+}
+
+.husky {
+    width: 39%;
+    height: 41%;
+    bottom: 2%;
+    left: 5%;
+}
+
+.bear {
+    width: 40%;
+    height: 41%;
+    bottom: 2%;
+    right: 2%;
+}
+
+.landscape-top {
+    top: 7%;
+    left: 37%;
+    width: 26%;
+    height: 25%;
+    clip-path: url(#topCurve);
+    z-index: 1;
+}
+
+.landscape-left {
+    top: 37%;
+    left: 7%;
+    width: 25%;
+    height: 27%;
+    clip-path: url(#sideCurve);
+    z-index: 1;
+}
+
+.landscape-right {
+    top: 37%;
+    right: 7%;
+    width: 25%;
+    height: 27%;
+    clip-path: url(#sideCurve);
+    z-index: 1;
+}
+
+.landscape-bottom {
+    bottom: 4%;
+    left: 35%;
+    width: 30%;
+    height: 27%;
+    clip-path: url(#bottomCurve);
+    z-index: 1;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <svg width="0" height="0"
+         style="position:absolute">
+
+        <defs>
+            <clipPath id="topCurve"
+                      clipPathUnits="objectBoundingBox">
+                <path d="
+                    M 0,0
+                    Q 0.5,0.45 1,0
+                    L 0.82,0.8
+                    Q 0.5,1 0.18,0.8
+                    Z
+                "/>
+            </clipPath>
+
+            <clipPath id="sideCurve"
+                      clipPathUnits="objectBoundingBox">
+                <path d="
+                    M 0,0
+                    Q 0.5,0.5 0,1
+                    L 1,1
+                    Q 0.5,0.5 1,0
+                    Z
+                "/>
+            </clipPath>
+
+            <clipPath id="bottomCurve"
+                      clipPathUnits="objectBoundingBox">
+                <path d="
+                    M 0,0.25
+                    Q 0.5,0.8 1,0.25
+                    L 0.82,1
+                    L 0.18,1
+                    Z
+                "/>
+            </clipPath>
+
+        </defs>
+    </svg>
+
+    <div class="item animal wolf">
+        <img src="images/wolf.jpg" alt="Wolf">
+    </div>
+
+
+    <div class="item animal tiger">
+        <img src="images/tiger.jpg" alt="Tiger">
+    </div>
+
+
+    <div class="item animal lion">
+        <img src="images/lion.jpg" alt="Lion">
+    </div>
+
+    <div class="item animal husky">
+        <img src="images/husky.jpg" alt="Husky">
+    </div>
+
+    <div class="item animal bear">
+        <img src="images/bear.jpg" alt="Bear">
+    </div>
+
+    <div class="item landscape-top">
+        <img src="images/top-landscape.jpg" alt="Sunset sky">
+    </div>
+
+
+    <div class="item landscape-left">
+        <img src="images/left-landscape.jpg" alt="Snowy forest">
+    </div>
+
+
+    <div class="item landscape-right">
+        <img src="images/right-landscape.jpg" alt="Green forest">
+    </div>
+
+
+    <div class="item landscape-bottom">
+        <img src="images/bottom-landscape.jpg" alt="Water">
+    </div>
+
+</div>
+
+</body>
+</html>
